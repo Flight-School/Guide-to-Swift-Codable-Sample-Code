@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Luggage" representedClassName="Luggage" syncable="YES" codeGenerationType="class">
+        <attribute name="arrivedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="departedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="identifier" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="weight" attributeType="Float" minValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Passenger" inverseName="luggage" inverseEntity="Passenger" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="identifier"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Passenger" representedClassName="Passenger" syncable="YES" codeGenerationType="class">
+        <attribute name="familyName" optional="YES" attributeType="String" maxValueString="3" syncable="YES"/>
+        <attribute name="givenName" optional="YES" attributeType="String" minValueString="1" maxValueString="1" syncable="YES"/>
+        <relationship name="luggage" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Luggage" inverseName="owner" inverseEntity="Luggage" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="familyName"/>
+                <constraint value="givenName"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="Luggage" positionX="-54" positionY="9" width="128" height="118"/>
+        <element name="Passenger" positionX="-288" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>

@@ -1,0 +1,36 @@
+language: swift
+osx_image: xcode9.3
+env:
+  global:
+    - SDK=iphoneos
+    - TARGET=armv7-apple-ios10
+  matrix:
+    - PLAYGROUND_DIR="Chapter 1/Plane.playground"
+    - PLAYGROUND_DIR="Chapter 2/Flight Plan.playground"
+    - PLAYGROUND_DIR="Chapter 3/AnyDecodable.playground"
+    - PLAYGROUND_DIR="Chapter 3/Coordinates.playground"
+    - PLAYGROUND_DIR="Chapter 3/EconomySeat.playground"
+    - PLAYGROUND_DIR="Chapter 3/EitherBirdOrPlane.playground"
+    - PLAYGROUND_DIR="Chapter 3/FuelPrice.playground"
+    - PLAYGROUND_DIR="Chapter 3/Pixel.playground"
+    - PLAYGROUND_DIR="Chapter 3/Route.playground"
+    - PLAYGROUND_DIR="Chapter 4/Music Store.playground"
+    - PLAYGROUND_DIR="Chapter 5/In Flight Service.playground"
+    - PLAYGROUND_DIR="Chapter 6/Luggage Scanner.playground"
+    - PLAYGROUND_DIR="Chapter 7/MessagePackEncoder.playground"
+script:
+  xcrun swift --version &&
+  cd "${PLAYGROUND_DIR}" &&
+  xcrun -sdk "${SDK}"
+    swiftc -target "${TARGET}"
+           -emit-library -emit-module -module-name AuxiliarySources
+           Sources/*.swift &&
+  if ! xcrun swiftc -emit-imported-modules Contents.swift |
+        grep -q "PlaygroundSupport";
+  then
+    cat <(echo "import AuxiliarySources") Contents.swift > main.swift &&
+    xcrun -sdk "${SDK}"
+      swiftc -target "${TARGET}"
+        -I "." -L "." -lAuxiliarySources -module-link-name AuxiliarySources
+        -o Playground main.swift;
+  fi
