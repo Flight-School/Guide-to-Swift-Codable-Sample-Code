@@ -13,7 +13,7 @@ public struct Order: Codable {
     }
     private(set) var lineItems: [LineItem]
     
-    private(set) let creationDate: Date = Date()
+    public let creationDate: Date = Date()
     
     public var totalPrice: Int {
         return lineItems.map{ $0.price }.reduce(0, +)
