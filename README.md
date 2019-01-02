@@ -289,9 +289,9 @@ MIT
 
 ## About Flight School
 
-Flight School is a new book series for Swift developers.
-Each month, we'll explore an essential part of
-iOS, macOS, and Swift development through concise, focused books.
+Flight School is a new book series for Swift developers
+that explores essential topics in
+iOS and macOS development through concise, focused guides.
 
 If you'd like to get in touch,
 feel free to message us on Twitter
