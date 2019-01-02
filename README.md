@@ -1,5 +1,7 @@
 # Flight School Guide to Swift Codable Sample Code
 
+![Build Status](https://api.travis-ci.com/Flight-School/Guide-to-Codable-Sample-Code.svg?branch=master)
+
 This repository contains sample code used in the
 [Flight School Guide to Swift Codable](https://gumroad.com/l/codable).
 
