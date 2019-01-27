@@ -3,3 +3,9 @@ public enum Fuel: String, Decodable {
     case jetB = "Jet B"
     case oneHundredLowLead = "100LL"
 }
+
+extension Fuel: CustomStringConvertible {
+    public var description: String {
+        return self.rawValue
+    }
+}

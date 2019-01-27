@@ -1,12 +1,14 @@
+import Foundation
+
 public struct CanadianFuelPrice: Decodable {
     public let type: Fuel
     
     /// CAD / liter
-    public let price: Double
+    public let price: Decimal
 }
 
 extension CanadianFuelPrice: FuelPrice {
-    public var pricePerLiter: Double {
+    public var pricePerLiter: Decimal {
         return self.price
     }
 
@@ -14,3 +16,5 @@ extension CanadianFuelPrice: FuelPrice {
         return "CAD"
     }
 }
+
+extension CanadianFuelPrice: CustomStringConvertible {}

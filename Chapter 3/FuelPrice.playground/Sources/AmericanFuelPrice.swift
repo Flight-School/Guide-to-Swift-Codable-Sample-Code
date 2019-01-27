@@ -1,8 +1,10 @@
+import Foundation
+
 public struct AmericanFuelPrice: Decodable {
     public let fuel: Fuel
     
     /// USD / gallon
-    public let price: Double
+    public let price: Decimal
 }
 
 extension AmericanFuelPrice: FuelPrice {
@@ -10,7 +12,7 @@ extension AmericanFuelPrice: FuelPrice {
         return self.fuel
     }
 
-    public var pricePerLiter: Double {
+    public var pricePerLiter: Decimal {
         return self.price /
                 3.78541
     }
@@ -19,3 +21,5 @@ extension AmericanFuelPrice: FuelPrice {
         return "USD"
     }
 }
+
+extension AmericanFuelPrice: CustomStringConvertible {}

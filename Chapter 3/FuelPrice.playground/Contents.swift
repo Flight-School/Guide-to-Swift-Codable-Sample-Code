@@ -38,5 +38,6 @@ let caPrices = try! decoder.decode([String: [CanadianFuelPrice]].self, from: can
 
 var prices: [FuelPrice] = []
 prices.append(contentsOf: usPrices)
-prices.append(contentsOf: caPrices["fuels"] as! [FuelPrice])
+prices.append(contentsOf: caPrices["fuels"]! as [FuelPrice])
+
 print(prices)
