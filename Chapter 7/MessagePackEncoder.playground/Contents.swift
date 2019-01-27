@@ -12,4 +12,5 @@ let plane = Plane(manufacturer: "Cirrus",
 
 let encoder = MessagePackEncoder()
 let data = try! encoder.encode(plane)
-print(data.map{ String(format:"%2X", $0) })
+
+print(data.map { String(format:"%02X", $0) })
