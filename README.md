@@ -1,9 +1,15 @@
+<a href="https://flight.school/books/codable">
+    <img src="cover.jpg" alt="Flight School Guide to Swift Codable Cover" title="Flight School Guide to Swift Codable" width="216" height="332" align="right">
+</a>
+
 # Flight School Guide to Swift Codable Sample Code
 
-![Build Status](https://api.travis-ci.com/Flight-School/Guide-to-Codable-Sample-Code.svg?branch=master)
+[![Build Status][build status badge]][build status]
+[![License][license badge]][license]
+[![Swift Version][swift version badge]][swift version]
 
 This repository contains sample code used in the
-[Flight School Guide to Swift Codable](https://gumroad.com/l/codable).
+[Flight School Guide to Swift Codable](https://flight.school/books/codable).
 
 ---
 
@@ -289,11 +295,17 @@ MIT
 
 ## About Flight School
 
-Flight School is a new book series for Swift developers
-that explores essential topics in
-iOS and macOS development through concise, focused guides.
+Flight School is a book series for advanced Swift developers
+that explores essential topics in iOS and macOS development
+through concise, focused guides.
 
 If you'd like to get in touch,
-feel free to message us on Twitter
-([@flightdotschool](https://twitter.com/flightdotschool))
-or email us at <mailto:info@flight.school>.
+feel free to [message us on Twitter](https://twitter.com/flightdotschool)
+or email us at <info@flight.school>.
+
+[build status]: https://travis-ci.org/Flight-School/Guide-to-Swift-Codable-Sample-Code
+[build status badge]: https://api.travis-ci.com/Flight-School/Guide-to-Swift-Codable-Sample-Code.svg?branch=master
+[license]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license badge]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[swift version]: https://swift.org/download/
+[swift version badge]: http://img.shields.io/badge/swift%20version-5.0-orange.svg?style=flat
