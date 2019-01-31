@@ -2,7 +2,7 @@
     <img src="cover.jpg" alt="Flight School Guide to Swift Codable Cover" title="Flight School Guide to Swift Codable" width="216" height="332" align="right">
 </a>
 
-# Flight School Guide to Swift Codable Sample Code
+# Guide to Swift Codable Sample Code
 
 [![Build Status][build status badge]][build status]
 [![License][license badge]][license]
