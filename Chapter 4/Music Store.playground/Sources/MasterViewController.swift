@@ -4,7 +4,7 @@ public class MasterViewController: UITableViewController {
     var results: [SearchResult] = []
     var dataTask: URLSessionDataTask? = nil
 
-    lazy var activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .white)
+    lazy var activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView(style: .white)
 
     public func search<T>(for type: T.Type, with term: String) where T: MediaType {
         let components = AppleiTunesSearchURLComponents<T>(term: term)
