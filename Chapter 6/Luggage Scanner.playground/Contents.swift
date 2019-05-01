@@ -22,7 +22,7 @@ do {
     fatalError("\(error)")
 }
 
-DispatchQueue.main.asyncAfter(deadline: .now() + 100.0) {
+DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
     do {
         for image in tagsAtDeparture {
             try scanner.scan(image: image, at: .destination, in: context)
