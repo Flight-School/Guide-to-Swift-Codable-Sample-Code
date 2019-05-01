@@ -2,7 +2,7 @@ import UIKit
 
 public class MasterViewController: UITableViewController {
     var results: [SearchResult] = []
-    var dataTask: URLSessionDataTask? = nil
+    var dataTask: URLSessionDataTask?
 
     lazy var activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView(style: .white)
 
