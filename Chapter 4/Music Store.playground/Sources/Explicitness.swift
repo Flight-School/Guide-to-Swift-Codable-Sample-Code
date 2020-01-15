@@ -7,7 +7,7 @@ public enum Explicitness: String, Decodable {
     case explicit
     
     /// Cleaned version with explicit lyrics "bleeped out"
-    case clean
+    case cleaned
     
     /// No explicit lyrics
     case notExplicit
